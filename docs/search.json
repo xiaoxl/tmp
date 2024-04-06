@@ -1,0 +1,45 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Stats",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n[1]\n\n\nReferences\n\n\n[1] Hoff, P. D.\n(2009). A first course in bayesian statistical methods.\nSpringer.\n\n\ndddd",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "contents/app/specialfunctions.html",
+    "href": "contents/app/specialfunctions.html",
+    "title": "Appendix A: Special functions",
+    "section": "",
+    "text": "A.1 Gamma functions",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Special functions</span>"
+    ]
+  },
+  {
+    "objectID": "contents/app/specialfunctions.html#gamma-functions",
+    "href": "contents/app/specialfunctions.html#gamma-functions",
+    "title": "Appendix A: Special functions",
+    "section": "",
+    "text": "Definition A.1 (Gamma function) Let \\(z\\) be any complex number that \\(\\mathfrak R(z)&gt;0\\). Then \\[\n\\Gamma(z)=\\int_0^{\\infty}t^{z-1}\\me^{-t}\\dl3t.\n\\tag{A.1}\\]\n\n\nTheorem A.1 \\[\n\\Gamma(z+1)=z\\Gamma(z).\n\\tag{A.2}\\]\n\n\nProof. \\[\n\\begin{split}\n    \\Gamma(z+1)&=\\int_0^{\\infty}t^{z+1-1}\\me^{-t}\\dl3t=-\\int_0^{\\infty}t^{z+1-1}\\dl3\\me^{-t}\\\\\n    &=-t\\me^{-t}\\biggr\\rvert_0^{\\infty}+\\int_0^{\\infty}\\me^{-t}\\dl3t^{z}=\\int_0^{\\infty}zt^{z-1}\\me^{-t}\\dl3t=z\\Gamma(z).\n\\end{split}\n\\]",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Special functions</span>"
+    ]
+  },
+  {
+    "objectID": "contents/app/specialfunctions.html#beta-functions",
+    "href": "contents/app/specialfunctions.html#beta-functions",
+    "title": "Appendix A: Special functions",
+    "section": "A.2 Beta functions",
+    "text": "A.2 Beta functions\n\nDefinition A.2 (Beta function) Let \\(z_1\\), \\(z_2\\) be two complex numbers that \\(\\mathfrak R(z_1),\\mathfrak R(z_2)&gt;0\\). Then \\[\nB(z_1,z_2)=\\int_0^1t^{z_1-1}(1-t)^{z_2-1}\\dl3t.\n\\tag{A.3}\\]\n\n\nTheorem A.2 (Relations between Beta functions and Gamma functions) \\[\n\\Gamma(\\alpha)\\Gamma(\\beta)=\\Gamma(\\alpha+\\beta)B(\\alpha, \\beta).\n\\tag{A.4}\\]\n\n\nProof. Use the following trick to change a product of two integrals into a double integral. \\[\n\\begin{align}\n\\Gamma(\\alpha)\\Gamma(\\beta)&=\\int_0^{\\infty}u^{\\alpha-1}\\me^{-u}\\dl3u\\int_0^{\\infty}v^{\\beta-1}\\me^{-v}\\dl3v\\\\\n&=\\int_0^{\\infty}\\int_0^{\\infty}u^{\\alpha-1}v^{\\beta-1}\\me^{-u-v}\\dl3u\\dl3v.\n\\end{align}\n\\]\nSet \\(u=st\\), \\(v=s-st\\). Then \\(s=u+v\\), \\(t=\\dfrac{u}{u+v}\\), and \\(\\abs{\\dfrac{\\partial(u,v)}{\\partial(s,t)}}=\\abs{\\mqty[t&s\\\\1-t&-s]}=s\\). Then \\[\\begin{split}\n    \\Gamma(\\alpha)\\Gamma(\\beta)&=\\int_0^{\\infty}\\int_0^{\\infty}u^{\\alpha-1}v^{\\beta-1}\\me^{-u-v}\\dl3u\\dl3v\\\\\n    &=\\int_{v=0}^{v=\\infty}\\int_{u=0}^{u=\\infty}(st)^{\\alpha-1}(s(1-t))^{\\beta-1}\\me^{-s}s\\dl3s\\dl3t\\\\\n    &=\\int_{t=0}^{t=1}\\int_{s=0}^{s=\\infty}s^{\\alpha+\\beta-1}t^{\\alpha-1}(1-t)^{\\beta-1}\\me^{-s}\\dl3s\\dl3t\\\\\n    &=\\int_{0}^{\\infty}s^{\\alpha+\\beta-1}\\me^{-s}\\dl3s\\int_{0}^{1}t^{\\alpha-1}(1-t)^{\\beta-1}\\dl3t\\\\\n    &=\\Gamma(\\alpha+\\beta)B(\\alpha,\\beta).\n\\end{split}\\]",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Special functions</span>"
+    ]
+  }
+]
